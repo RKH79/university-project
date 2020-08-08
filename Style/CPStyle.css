@@ -1,0 +1,600 @@
+:root{
+    font-size: 14px;
+    --fontFamily : shabnam;
+    --mainColor: #3C8DBC;
+    --fore1: #1A2226;
+    --fore2: #222D32;
+    --fore3: #aaaaaa;
+    --fore4: #eeeeee;
+    --fore5: #ffffff;
+}
+@font-face {
+    font-family: shabnam;
+    src: url('../Fonts/shabnam.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    background-color: var(--fore5);
+    cursor: default;
+    direction: rtl;
+    margin: 0;
+    font-family: var(--fontFamily);
+    overflow-x: hidden;
+}
+/* nav bar *******************************/
+header{
+    background-color: var(--mainColor);
+    border-bottom: solid 1px var(--fore3);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+    color: var(--fore4);
+    width: 100%;
+    height: 44px;
+    float: left;
+}
+header * {
+    display: inline-block;
+    transition: all .4s ease;
+}
+
+#headerTitle{
+    width: 190px;
+    text-align: center;
+    font-weight: bold;
+    transition: all .4s ease;
+}
+
+#showSidebar{
+    margin-right: 5px;
+    display: none;
+    fill: var(--fore4);
+    width: 22px;
+    height: 22px;
+    transition: all .4s ease;
+}
+#date{
+    float: left;
+}
+#user{
+    margin-right: 10px;
+    position: absolute;
+}
+/* sidebar *********************************/
+content{
+    position: absolute;
+    margin-top: 43px;
+    width: 100%;
+}
+#sidebar{
+    position: absolute;
+    width: 200px;
+    float: right;
+    background-color: var(--fore2);
+    color: var(--fore5);
+    height: 100%;
+    min-height: calc(100vh - 43px);
+    transition: margin-right .4s ease;
+}
+#sidebar > *{
+    padding: 10px 10px;
+    transition: all .4s ease;
+}
+.OptionBox{
+    display: flex;
+    cursor: pointer;
+}
+.OptionBox:hover{
+    background-color: #262829;
+}
+.selectOption{
+    border-left: solid 2px var(--mainColor);
+    background-color: var(--fore1)!important;
+}
+.OptionIcon{
+    width: 20px;
+    height: 20px;
+    fill: var(--fore3);
+    margin-left: 10px;
+}
+
+/* main ***************************************/
+main{
+    float: left;
+    width: calc(100% - 200px);
+    transition: all .4s ease;
+}
+.pageBtn{
+    margin-right: 20px;
+}
+/* quickShow *************************************/
+#quickShow{
+    padding-top: 10px;
+    text-align: center;
+}
+.quickShowBox{
+    display: inline-block;
+    width: 30%;
+    min-width: 265px;
+    max-height: 100px;
+    margin: .5vw 1vw;
+}
+.quickShowBox > *{
+    display: inline-block;
+}
+.quickShowIcon{
+    width: 75px;
+    height: 75px;
+    float: right;
+    fill: var(--fore3);
+    padding: 10px;
+}
+
+.quickShowText{
+    line-height: 35px;
+    float: right;
+    margin: 10px 10px 0 0;
+    color: var(--fore5);
+}
+.quickShowDetails{
+    float: right;
+}
+
+/* userChart ********************************/
+
+#userChart{
+    width: 95%;
+    height: 315px;
+    border: solid 1px var(--fore3);
+    margin: auto;
+}
+#chartTitle{
+    text-align: center;
+    margin-top: 5px;
+}
+#chartRight{
+    width: calc(100% - 30px) ;
+    float: right;
+}
+#chartLeft{
+    width: 30px;
+    height: 100%;
+    float: left;
+}
+#chartLeft span:first-child{
+    margin-top: 31px;
+}
+#chartLeft span{
+    display: block;
+    line-height: 50px;
+}
+#chartShape{
+    width: calc(100% - 60px);
+    height: 260px;
+    margin: 0 30px;
+}
+#chartShape > *{
+    fill: var(--mainColor);
+    stroke: var(--mainColor);
+}
+#showValue{
+    border-radius: 7px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid var(--mainColor);
+    position: absolute;
+    opacity: 0;
+    transition: opacity .4s ease;
+    text-align: center;
+    line-height: 33px;
+    background-color: var(--fore5);
+}
+#shapeTitleBox{
+    width: 99.5%;
+    margin: auto;
+    text-align: center;
+}
+.shapeTitle{
+    display: inline-block;
+}
+.shapeTitle:nth-child(even){
+    margin: 0 calc(calc(100% / 6) - 50px);
+}
+/* advertise ************************************/
+.book {
+    border: solid 1px var(--fore4);
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 3px 6px 6px -4px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    display: inline-table;
+    margin: 10px;
+    padding: 5px;
+    transition: all .3s ease;
+    width: 400px;
+}
+.book:hover{
+    box-shadow: 3px 6px 6px -4px rgba(0, 0, 0, .6);
+}
+
+.bookImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, .3);
+    display: block;
+    float: left;
+    height: 300px;
+    width: 213px;
+}
+.bookDetails{
+    line-height: 35px;
+    margin-top: 35px;
+}
+.bookName{
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bookPrice,.bookSubject,.bookStatus {
+    font-size: 1rem;
+}
+
+.bookDate,.bookView {
+    font-size: 0.8rem;
+}
+#bookBox {
+    padding: 20px 1vw;
+    text-align: center;
+}
+/* table ***********************************/
+table{
+    width: 95%;
+    margin: 16px auto;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 7px;
+    overflow: hidden;
+    padding: 4px;
+    border: solid 1px var(--fore4);
+}
+table tr:nth-child(odd){
+    background-color: var(--fore4);
+}
+.tableLink{
+    cursor: pointer;
+}
+.tableLink:hover{
+    background-color: var(--fore3);
+}
+table th{
+    padding: 6px;
+    background-color: var(--mainColor);
+    color: var(--fore5);
+    font-weight: normal;
+}
+table td{
+    height: 40px;
+    border-left: dotted 1px var(--fore4);
+}
+/* modal *********************************/
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.55);
+}
+
+#modalContent {
+    position: fixed;
+    background-color: var(--fore4);
+    margin: auto;
+    width: 80%;
+    max-height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.7);
+    animation-name: animateTop;
+    animation-duration: 0.4s;
+    border-radius: 12px;
+    overflow: auto;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50.115%);
+}
+
+@keyframes animateTop {
+    from {transform: translate(50%,0); opacity:0}
+    to {transform: translate(50%,50.115%); opacity:1}
+}
+
+#close {
+    color: var(--fore5);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,#close:focus {
+    color: var(--fore1);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalHeader {
+    padding: 2px 13px;
+    background-color: var(--mainColor);
+    color: var(--fore5);
+    text-align: center;
+}
+
+#modalTitle{
+    margin: 10px 0;
+}
+
+#modalBody {
+    padding: 2px 16px;
+}
+/* modal for new operator and edit advertise*********************/
+#modalUserManageBox{
+    margin: auto;
+    padding: 15px 0;
+    max-width: 240px;
+}
+
+#modalUserManageBox *{
+    margin: 5px auto;
+    padding: 4px;
+    font-family: var(--fontFamily);
+    display: block;
+    width: 90%;
+    transition: all .4s ease;
+    border-radius: 7px;
+    border : 1px var(--fore3) solid ;
+    outline: none;
+    text-align: center;
+}
+
+#modalUserManageBox *:hover, #modalUserManageBox *:focus {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .4);
+}
+
+#modalUserManageBox *:focus{
+    border-color: var(--mainColor);
+}
+/* userEdit ********************************/
+#userEdit{
+    border: solid 1px var(--fore3);
+    width: 95%;
+    margin: 15px 2.5%;
+    display: flow-root;
+    background-color: var(--fore4);
+}
+#userData{
+    float: right;
+    margin: 15px 20px 15px 0;
+    width: 48%;
+}
+.userInformation{
+    line-height: 40px;
+}
+.userInformation > *{
+    display: inline;
+}
+#userNewData{
+    float: left;
+    width: 48%;
+    margin: 15px 0;
+}
+#userNewData *{
+    margin: 5px auto;
+    padding: 4px;
+    font-family: var(--fontFamily);
+    display: block;
+    width: 90%;
+    transition: all .4s ease;
+    border-radius: 7px;
+    border : 1px var(--fore3) solid ;
+    outline: none;
+    text-align: center;
+}
+#userNewData *:hover, #userNewData *:focus {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .4);
+}
+#userNewData *:focus{
+    border-color: var(--mainColor);
+}
+.Btn{
+    border-radius: 16px !important;
+    padding: 5px 5px !important;
+    background-color: var(--mainColor) !important;
+    border: none !important;
+    color: var(--fore5) ;
+    cursor: pointer;
+    text-align: center;
+    max-width: 200px;
+}
+/* modal for book **********************************r*/
+
+#modalBook {
+    display: flow-root;
+    padding: 15px 0;
+}
+
+#modalBookBox {
+    color: var(--fore1);
+    width: calc( 81vw - 300px);
+}
+
+#modalBookImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, .3);
+    background-size: cover;
+    float: left;
+    height: 300px;
+    width: 213px;
+}
+
+#modalBookDetails {
+    font-size: 1.3rem;
+    border-bottom: solid 1px var(--fore3);
+}
+
+#modalBookWriter , #modalBookPrice {
+    font-size: 1.2rem;
+}
+
+#modalBookBox div {
+    padding: 10px 0;
+}
+#modalBtnS *{
+    display: inline-block;
+    width: 200px;
+}
+#statusDetails{
+    margin: 5px auto;
+    padding: 4px;
+    font-family: var(--fontFamily);
+    display: block;
+    width: 90%;
+    transition: all .4s ease;
+    border-radius: 7px;
+    border : 1px var(--fore3) solid ;
+    outline: none;
+    text-align: center;
+}
+
+#statusDetails*:hover, #statusDetails*:focus {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .4);
+}
+#statusDetails*:focus{
+    border-color: var(--mainColor);
+}
+.modalBtn{
+    margin: 5px;
+    max-width: 210px;
+}
+/* advertise edit *********************/
+#newAdvertiseBookImage{
+    display: none;
+}
+#response{
+    border: none;
+    padding: 0;
+}
+.returnResponse{
+    width: 125px !important;
+    background-position: center;
+    background-size: cover;
+    height: 180px;
+    border: none;
+    padding: 0;
+}
+/* new subject ****************************/
+#newSubjectBox *{
+    display: inline-block;
+    margin-right: 2%;
+    transition: all .4s ease;
+}
+#newSubject{
+    padding: 4px;
+    font-family: var(--fontFamily);
+    border-radius: 7px;
+    border : 1px var(--fore3) solid ;
+    text-align: center;
+    outline: none;
+}
+#newSubjectBox *:hover, #newSubjectBox *:focus {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .4);
+}
+
+#newSubject:focus{
+    border-color: var(--mainColor);
+}
+#newSubjectBtn{
+    width: 200px;
+}
+/* loader ********************************/
+.loader {
+    border: 5px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    border-top-color: var(--mainColor);
+    border-bottom-color: var(--mainColor);
+    width: 40px;
+    height: 40px;
+    animation: spin 1.5s linear infinite;
+    margin: 5px auto;
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* ScreenSize *******************************/
+@media only screen and (max-width: 1082px){
+    .quickShowBox{
+        width: 46%;
+    }
+}
+@media only screen and (max-width: 768px){
+    #headerTitle{
+        display: none;
+    }
+    #showSidebar{
+        display: inline-block;
+    }
+    #sidebar{
+        margin-right: -200px;
+    }
+    .shapeTitle{
+        font-size: 10px;
+    }
+    #chartLeft{
+        font-size: 10px;
+    }
+    main{
+        width: 100%;
+        margin-left: 0;
+    }
+    .shapeTitle:nth-child(even) {
+        margin: 0 calc(calc(100% / 6) - 40px);
+    }
+    #modalBookImg {
+        float: none;
+        margin: auto;
+    }
+    #modalBookBox{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 566px){
+    .quickShowBox{
+        width: 96%;
+    }
+    #userNewData {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    #userData {
+        float: none;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+}
